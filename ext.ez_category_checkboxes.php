@@ -295,6 +295,8 @@ TABLE;
 function ez_create_table(update_list)
 {
 	// hide multi-select box
+	// CHANGED: Fusionary: check for existence of #categorytree first
+	if (!document.getElementById || !document.getElementById('categorytree')) return;
 	document.getElementById('categorytree').style.display='none';
 	
 	var cat_table = document.getElementById('ez_checkbox_table');
